@@ -20,9 +20,8 @@ proton-vpn-uninstall:
     cd ~/.cache/Proton && rm -rf VPN
     cd ~/.config/Proton && rm -rf VPN
 
-meteo ville="La-Ville-aux-Dames":
-    curl --silent wttr.in/{{ ville }}
+meteo ville="La+Ville+aux+Dames":
+    curl --silent wttr.in/{{ ville }}?lang=fr
 
 ip-location:
     curl --silent ipinfo.io | jq
-
