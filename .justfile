@@ -25,3 +25,24 @@ meteo ville="La+Ville+aux+Dames":
 
 ip-location:
     curl --silent ipinfo.io | jq
+    
+# Ajoute un alias 'll' pour 'ls -la' dans ~/.bashrc
+alias alias-name command :
+    if ! grep -q "^alias {{ alias-name }}='{{ command }}'$" ~/.bashrc; then \
+        echo "alias {{ alias-name }}='{{ command }}'" >> ~/.bashrc && \
+        echo "Alias ajouté avec succès."; \
+        source ~/.bashrc ;\
+    else \
+        echo "L'alias existe déjà."; \
+    fi
+    
+push-justfile:
+    git -C ~/projects/my-just-commands-file/ status
+    git -C ~/projects/my-just-commands-file/ add .
+    git -C ~/projects/my-just-commands-file/ commit -m ".justfile updated at $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+    @echo "Commit success!"
+    git push
+    @echo "Push success!"
+    
+     
+     
