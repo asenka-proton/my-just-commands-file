@@ -41,7 +41,7 @@ push-justfile:
     git -C ~/projects/my-just-commands-file/ add .
     git -C ~/projects/my-just-commands-file/ commit -m ".justfile updated at $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
     @echo "Commit success!"
-    git push
+    git -C ~/projects/my-just-commands-file/ push
     @echo "Push success!"
     
      
