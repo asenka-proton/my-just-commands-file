@@ -48,4 +48,9 @@ pull-justfile:
     git -C ~/projects/my-just-commands-file/ fetch
     git -C ~/projects/my-just-commands-file/ status
     git -C ~/projects/my-just-commands-file/ pull
+    
+ia:
+    ollama list
+    ollama ps
+    ollama run codellama:latest
      
