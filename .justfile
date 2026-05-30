@@ -44,5 +44,8 @@ push-justfile:
     git -C ~/projects/my-just-commands-file/ push
     @echo "Push success!"
     
-     
+pull-justfile:
+    git -C ~/projects/my-just-commands-file/ status
+    git -C ~/projects/my-just-commands-file/ pull
+    @echo "Pull success!"
      
