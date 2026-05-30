@@ -53,4 +53,10 @@ ia:
     ollama list
     ollama ps
     ollama run codellama:latest
-     
+    
+edit file:
+    xdg-open {{ file }}
+
+gp8:
+    wine /mnt/shared/Logiciels/Windows/Guitar_Pro_8/GuitarPro.exe
+
