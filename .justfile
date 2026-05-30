@@ -51,7 +51,7 @@ pull-justfile:
     
 verify-remote-justfile:
     curl -L https://raw.githubusercontent.com/asenka-proton/my-just-commands-file/main/.justfile
-    
+      
 ia:
     ollama list
     ollama ps
