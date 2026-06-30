@@ -62,4 +62,13 @@ edit file:
 
 gp8:
     wine /mnt/shared/Logiciels/Windows/Guitar_Pro_8/GuitarPro.exe
+    
+link target link:
+    ln -s {{ target }} {{ link }}
+    ls -l {{ link }}
+    
+gen-ssh-key mail:
+    ssh-keygen -t ed25519 -C "{{ mail }}"
+    eval "$(ssh-agent -s)"
+    
 
